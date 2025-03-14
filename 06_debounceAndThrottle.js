@@ -1,0 +1,2 @@
+const debounce = () => {};
+const throttle = () => {};
