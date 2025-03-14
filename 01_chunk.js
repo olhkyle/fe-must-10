@@ -10,4 +10,16 @@
  * chunk([], 5) => []
  */
 
-export const chunk = (arr, size = 1) => {};
+export const chunk = (arr, size = 1) => {
+	if (!arr.length || size < 1) {
+		return [];
+	}
+
+	const chunks = [];
+
+	for (let i = 0; i < arr.length; i += size) {
+		chunks.push(arr.slice(i, i + size));
+	}
+
+	return chunks;
+};
